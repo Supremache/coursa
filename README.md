@@ -121,14 +121,6 @@ Coursa is a cutting-edge eCommerce platform for courses, designed to seamlessly 
    npm install
    ```
 
-3. Configure environment variables:
-   Create a `.env` file and add the following:
-   ```env
-   DATABASE_URL=your_database_url
-   NEXTAUTH_SECRET=your_secret
-   NEXTAUTH_URL=http://localhost:3000
-   ```
-
 4. Start the development server:
    ```bash
    npm run dev
