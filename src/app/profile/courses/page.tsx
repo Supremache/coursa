@@ -3,8 +3,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
+import { StarRating } from "@/components/ui/star-rating";
 import { courses } from "@/constants";
-import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,7 +14,7 @@ export default function Courses() {
     <div className="space-y-8">
       <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {courses.map((course, index) => (
-          <CourseCard key={index} {...course} />
+          <ProfileCourseCard key={index} {...course} />
         ))}
       </div>
       <Pagination>
@@ -53,7 +53,7 @@ interface CourseCardProps {
   image: string;
 }
 
-export function CourseCard({
+function ProfileCourseCard({
   title,
   author,
   rating,
@@ -84,20 +84,13 @@ export function CourseCard({
       </CardContent>
       <Separator />
       <CardFooter className="py-2 px-4 flex items-center justify-between gap-2 text-muted-foreground">
-        <div className="flex">
-          {Array(5)
-            .fill(null)
-            .map((_, i) => (
-              <Star
-                key={i}
-                className={`w-4 h-4 ${
-                  i < rating
-                    ? "text-yellow-400 fill-yellow-400"
-                    : "text-gray-300"
-                }`}
-              />
-            ))}
-        </div>
+      <StarRating
+            value={rating}
+            setValue={() => rating}
+            iconProps={{
+              className: "fill-yellow-500 stroke-yellow-500 size-5",
+            }}
+          />
         ({totalRatings.toLocaleString()} Ratings)
       </CardFooter>
     </Card>

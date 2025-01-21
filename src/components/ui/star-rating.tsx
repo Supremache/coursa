@@ -1,3 +1,5 @@
+'use client';
+
 import type { Dispatch, SetStateAction } from 'react'
 import React from 'react'
 import type { LucideIcon, LucideProps } from 'lucide-react'
