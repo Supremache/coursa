@@ -131,15 +131,6 @@ Coursa is a cutting-edge eCommerce platform for courses, designed to seamlessly 
 
 ---
 
-## Future Enhancements
-
-- **Payment Gateways**: Enable secure course purchases.
-- **Multi-Language Support**: Cater to a global audience.
-- **Certificate Generation**: Issue completion certificates.
-- **AI-Powered Feedback**: Use sentiment analysis to improve courses.
-
----
-
 ## Contributing
 
 We welcome contributions to Coursa! Follow these steps:
